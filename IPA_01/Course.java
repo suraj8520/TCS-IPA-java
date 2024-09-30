@@ -7,6 +7,8 @@ public class Course{
     private int quiz;
     private int handson;
 
+    // Could've added parameterized constructor;
+
     // setters and getters
     public void setCourseId(int id){
         courseId = id;
