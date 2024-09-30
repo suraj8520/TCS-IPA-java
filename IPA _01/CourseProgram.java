@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 
 class CourseProgram{
 
@@ -104,15 +105,17 @@ class CourseProgram{
         }
 
         // Now sort those courses in ascending order
-        for(int i = 0; i < count - 1; i++){
-            for(int j = 0; j < count-i-1; j++){
-                if(result[j].getHandson() > result[j+1].getHandson()){
-                    Course temp = result[j];
-                    result[j] = result[j+1];
-                    result[j+1] = temp;
-                }
-            }
-        }
+        // for(int i = 0; i < count - 1; i++){
+        //     for(int j = 0; j < count-i-1; j++){
+        //         if(result[j].getHandson() > result[j+1].getHandson()){
+        //             Course temp = result[j];
+        //             result[j] = result[j+1];
+        //             result[j+1] = temp;
+        //         }
+        //     }
+        // }
+
+        Arrays.sort(result, (Course c1, Course c2) -> {return c1.getHandson() - c1.getHandson();});
         return result;
     }
 }
