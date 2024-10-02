@@ -47,7 +47,7 @@ public class Solution{
         int number = 0;
         for(Hotel h: hotels){
             String m = h.getBookingDate().split("-")[1];
-
+            //** .contains() can be used as well */
             if(m.equalsIgnoreCase(month)){
                 number += h.getNumberOfRoomsBooked();
             }
