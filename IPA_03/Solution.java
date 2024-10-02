@@ -56,7 +56,14 @@ public class Solution{
             if(highest == null || highest.getScore() < st.getScore()){
                 sHighest = highest;
                 highest = st;
-            }else if(sHighest == null || sHighest.getScore() < st.getScore()){
+                //* if second highest is null then it will always be assigned. even if the scores are equal. but if we want to do something else then we can add another condition */ */
+                //** If secondHighest  = null then if another score which is not equal to the highest will be selected */
+                //** if secondHigest is not null then the score which is greater than sHighest and smaller than higest one will be selected. */
+            }
+            else if(sHighest == null && st.getScore() < highest.getScore()){
+                sHighest = st;
+            }
+            else if(sHighest != null && sHighest.getScore() < st.getScore() && st.getScore() < highest.getScore()){
                 sHighest = st;
             }
         } 
