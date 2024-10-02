@@ -17,7 +17,7 @@ public class CountWordVowel{
         int count = 0;
 
         // for(String word: words){
-        // **    if(isVowel(word.charAt(0))) count++;
+        // **   if(isVowel(word.charAt(0))) count++;
         // }
 
         //** */ This also works.
