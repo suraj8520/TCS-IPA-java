@@ -17,7 +17,18 @@ public class SetIntersection{
             arr2[i] = sc.nextInt();
         }
 
+        ArrayList<Integer> intersection = new ArrayList<Integer>();
+        for(int i = 0; i < m; i++){
+            for(int j = 0; j < n; j++){
+                if(arr1[i] == arr2[j]){
+                    intersection.add(arr1[i]);
+                    // ^ to make sure that we don't add elements multiple time
+                    break;
+                }
+            }
+        }
 
+        System.out.println(intersection.toString());
         sc.close();
     }
 
